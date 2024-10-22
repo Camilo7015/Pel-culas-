@@ -1,138 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo de Películas</title>
+    <title>Galería de Imágenes</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Catálogo de Películas</h1>
-
-     <!-- Slider principal de películas en tendencia -->
-     <div class="slider">
-        <div class="slider-track">
-            <div class="slide">
-                <img src="imagenes/jhon_4.webp" alt="Tendencia 1">
-                <p>Tendencia: Película 1</p>
-            </div>
-            <div class="slide">
-                <img src="imagenes/piratas.webp" alt="Tendencia 2">
-                <p>Tendencia: Película 2</p>
-            </div>
-            <div class="slide">
-                <img src="imagenes/el_padrino.webp" alt="Tendencia 3">
-                <p>Tendencia: Película 3</p>
-            </div>
-            <div class="slide">
-                <img src="imagenes/tendencia4.jpg" alt="Tendencia 4">
-                <p>Tendencia: Película 4</p>
-            </div>
-            <div class="slide">
-                <img src="imagenes/tendencia5.jpg" alt="Tendencia 5">
-                <p>Tendencia: Película 5</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Buscador -->
-    <input type="text" id="buscar" placeholder="Buscar película por nombre..." onkeyup="buscarPelicula()">
-
-    <!-- Filtro por categoría -->
-    <select id="categorias" onchange="filtrarCategoria()">
-        <option value="todos">Todas las Categorías</option>
-        <option value="accion">Acción</option>
-        <option value="drama">Drama</option>
-        <option value="comedia">Comedia</option>
-        <option value="animacion">Animación</option>
-    </select>
-
-    <!-- Contenedor de películas -->
-    <div id="peliculas" class="peliculas">
-        <!-- 30 películas de ejemplo -->
-        <div class="pelicula" data-categoria="accion">
-            <img src="imagenes/jhon_1.webp" alt="Acción 1">
-            <p>John Wick</p>
-        </div>
-        <div class="pelicula" data-categoria="accion">
-            <img src="imagenes/jhon_2.jpg" alt="Acción 2">
-            <p>John Wick 2</p>
-        </div>
-        <div class="pelicula" data-categoria="comedia">
-            <img src="imagenes/son_como.jpg" alt="Comedia 1">
-            <p>Son como niños</p>
-        </div>
-        <div class="pelicula" data-categoria="drama">
-            <img src="imagenes/el_padrino.webp" alt="Drama 1">
-            <p>El Padrino</p>
-        </div>
-        <div class="pelicula" data-categoria="comedia">
-            <img src="imagenes/piratas.webp" alt="Comedia 3">
-            <p>Piratas del Caribe En el fin del mundo</p>
-        </div>
-        <div class="pelicula" data-categoria="animacion">
-            <img src="imagenes/rey_leon.webp" alt="Animación 1">
-            <p>El Rey Leon</p>
-        </div>
+    <div>
+        <!-- Campo de búsqueda por nombre -->
+        <input type="text" id="filtro-nombre" placeholder="Filtrar imágenes por nombre...">
         
-        <div class="pelicula" data-categoria="drama">
-            <img src="imagenes/pijama.png" alt="Drama 3">
-            <p>El niño con el pijama de rayas</p>
-        </div>
-        <div class="pelicula" data-categoria="accion">
-            <img src="imagenes/jhon_3.webp" alt="Acción 3">
-            <p>John Wick 3</p>
-        </div>
-        <div class="pelicula" data-categoria="accion">
-            <img src="imagenes/jhon_4.webp" alt="Acción 4">
-            <p>John Wick 4</p>
-        </div>
-        <div class="pelicula" data-categoria="accion">
-            <img src="imagenes/terminator.jpg" alt="Acción 5">
-            <p>Termineitor</p>
-        </div>
-        <div class="pelicula" data-categoria="animacion">
-            <img src="imagenes/minions.jfif" alt="Animación 3">
-            <p>Minios</p>
-        </div>
-        <div class="pelicula" data-categoria="drama">
-            <img src="imagenes/busqueda.webp" alt="Drama 4">
-            <p>En Busqueda de la felicidad</p>
-        </div>
-        <div class="pelicula" data-categoria="drama">
-            <img src="imagenes/intocable.jpg" alt="Drama 5">
-            <p>Intocable</p>
-        </div>
-
-        <div class="pelicula" data-categoria="comedia">
-            <img src="imagenes/son_como2.webp" alt="Comedia 2">
-            <p>Son como niños 2</p>
-        </div>
-
-        <div class="pelicula" data-categoria="comedia">
-            <img src="imagenes/yo y mi otro yo.webp" alt="Comedia 4">
-            <p>Irene y Yo... Y Mi Otro Yo</p>
-        </div>
-        <div class="pelicula" data-categoria="comedia">
-            <img src="imagenes/todo_poderoso.jpg" alt="Comedia 5">
-            <p>Todo Poderoso</p>
-        </div>
-        <div class="pelicula" data-categoria="animacion">
-            <img src="imagenes/mi_villano.jpg" alt="Animación 2">
-            <p>Mi Villano Favorito</p>
-        </div>
-
-        <div class="pelicula" data-categoria="animacion">
-            <img src="imagenes/toy_story.jpg" alt="Animación 4">
-            <p>TOY STORY</p>
-        </div>
-        <div class="pelicula" data-categoria="animacion">
-            <img src="imagenes/toy_3.jfif" alt="Animación 5">
-            <p>TOY STORY 3</p>
-        </div>
-        <!-- Agrega más películas según sea necesario -->
+        <!-- Selección de categoría -->
+        <select id="filtro-categoria">
+            <option value="">Todas las categorías</option>
+            <option value="naturaleza">Naturaleza</option>
+            <option value="animacion">Animación</option>
+            <option value="anime">Anime</option>
+            <option value="comedia">Comedia</option>
+            <option value="otros">Otros</option>
+        </select>
     </div>
 
-    <script src="script.js"></script>
+    <div class="galeria-container">
+        <!-- Aquí se cargarán las imágenes -->
+    </div>
+
+    <script>
+        let imagenesData = [];
+
+        // Cargar el archivo JSON
+        fetch('imagenes.json')
+            .then(response => response.json())
+            .then(data => {
+                imagenesData = data.imagenes; // Guardar los datos globalmente
+                mostrarImagenes(imagenesData); // Mostrar todas las imágenes al cargar
+            })
+            .catch(error => console.error('Error al cargar el JSON:', error));
+
+        // Función para mostrar las imágenes
+        function mostrarImagenes(imagenes) {
+            const galeria = document.querySelector('.galeria-container');
+            galeria.innerHTML = '';  // Limpiar la galería antes de cargar imágenes
+
+            imagenes.forEach(imagen => {
+                // Crear un contenedor para cada imagen
+                const figure = document.createElement('figure');
+                figure.classList.add('imagen-item');  // Añadir clase CSS para control del estilo
+
+                // Crear la imagen
+                const imgElement = document.createElement('img');
+                imgElement.src = imagen.ruta;  // Ruta de la imagen desde el JSON
+                imgElement.alt = imagen.nombre;  // Nombre de la imagen como texto alternativo
+
+                // Crear un pie de foto (opcional)
+                const caption = document.createElement('figcaption');
+                caption.textContent = imagen.nombre;  // Añadir el nombre de la imagen como pie de foto
+
+                // Añadir la imagen y el pie de foto al contenedor
+                figure.appendChild(imgElement);
+                figure.appendChild(caption);
+
+                // Añadir la figura completa al contenedor de la galería
+                galeria.appendChild(figure);
+            });
+        }
+
+        // Función para filtrar imágenes por nombre y categoría
+        function filtrarImagenes() {
+            const filtroNombre = document.getElementById('filtro-nombre').value.toLowerCase();
+            const filtroCategoria = document.getElementById('filtro-categoria').value;
+
+            const imagenesFiltradas = imagenesData.filter(imagen => {
+                const coincideNombre = imagen.nombre.toLowerCase().includes(filtroNombre);
+                const coincideCategoria = filtroCategoria === "" || imagen.categoria === filtroCategoria;
+
+                return coincideNombre && coincideCategoria;
+            });
+
+            mostrarImagenes(imagenesFiltradas);
+        }
+
+        // Evento para filtrar por nombre
+        document.getElementById('filtro-nombre').addEventListener('input', filtrarImagenes);
+
+        // Evento para filtrar por categoría
+        document.getElementById('filtro-categoria').addEventListener('change', filtrarImagenes);
+    </script>
 </body>
 </html>
