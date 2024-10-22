@@ -1,27 +1,33 @@
-function buscarPelicula() {
-    let input = document.getElementById('buscar').value.toLowerCase();
-    let peliculas = document.getElementsByClassName('pelicula');
 
-    for (let i = 0; i < peliculas.length; i++) {
-        let titulo = peliculas[i].getElementsByTagName('p')[0].textContent.toLowerCase();
-        if (titulo.includes(input)) {
-            peliculas[i].style.display = '';
-        } else {
-            peliculas[i].style.display = 'none';
-        }
-    }
-}
+    // Cargar el archivo JSON
+    fetch('imagenes.json')
+        .then(response => response.json())
+        .then(data => {
+            // Seleccionar el contenedor de la galería
+            const galeria = document.querySelector('.galeria-container');
 
-function filtrarCategoria() {
-    let categoriaSeleccionada = document.getElementById('categorias').value;
-    let peliculas = document.getElementsByClassName('pelicula');
+            // Recorrer todas las imágenes del JSON
+            data.imagenes.forEach(imagen => {
+                // Crear un contenedor para cada imagen
+                const figure = document.createElement('figure');
+                figure.classList.add('imagen-item');  // Añadir clase CSS para control del estilo
 
-    for (let i = 0; i < peliculas.length; i++) {
-        let categoria = peliculas[i].getAttribute('data-categoria');
-        if (categoriaSeleccionada === 'todos' || categoria === categoriaSeleccionada) {
-            peliculas[i].style.display = '';
-        } else {
-            peliculas[i].style.display = 'none';
-        }
-    }
-}
+                // Crear la imagen
+                const imgElement = document.createElement('img');
+                imgElement.src = imagen.ruta;  // Ruta de la imagen desde el JSON
+                imgElement.alt = imagen.nombre;  // Nombre de la imagen como texto alternativo
+
+                // Crear un pie de foto (opcional)
+                const caption = document.createElement('figcaption');
+                caption.textContent = imagen.nombre;  // Añadir el nombre de la imagen como pie de foto
+
+                // Añadir la imagen y el pie de foto al contenedor
+                figure.appendChild(imgElement);
+                figure.appendChild(caption);
+
+                // Añadir la figura completa al contenedor de la galería
+                galeria.appendChild(figure);
+            });
+        })
+        .catch(error => console.error('Error al cargar el JSON:', error));
+
