@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Películas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Catálogo de Películas</h1>
+
+     <!-- Slider principal de películas en tendencia -->
+     <div class="slider">
+        <div class="slider-track">
+            <div class="slide">
+                <img src="imagenes/jhon_4.webp" alt="Tendencia 1">
+                <p>Tendencia: Película 1</p>
+            </div>
+            <div class="slide">
+                <img src="imagenes/piratas.webp" alt="Tendencia 2">
+                <p>Tendencia: Película 2</p>
+            </div>
+            <div class="slide">
+                <img src="imagenes/el_padrino.webp" alt="Tendencia 3">
+                <p>Tendencia: Película 3</p>
+            </div>
+            <div class="slide">
+                <img src="imagenes/tendencia4.jpg" alt="Tendencia 4">
+                <p>Tendencia: Película 4</p>
+            </div>
+            <div class="slide">
+                <img src="imagenes/tendencia5.jpg" alt="Tendencia 5">
+                <p>Tendencia: Película 5</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buscador -->
+    <input type="text" id="buscar" placeholder="Buscar película por nombre..." onkeyup="buscarPelicula()">
+
+    <!-- Filtro por categoría -->
+    <select id="categorias" onchange="filtrarCategoria()">
+        <option value="todos">Todas las Categorías</option>
+        <option value="accion">Acción</option>
+        <option value="drama">Drama</option>
+        <option value="comedia">Comedia</option>
+        <option value="animacion">Animación</option>
+    </select>
+
+    <!-- Contenedor de películas -->
+    <div id="peliculas" class="peliculas">
+        <!-- 30 películas de ejemplo -->
+        <div class="pelicula" data-categoria="accion">
+            <img src="imagenes/jhon_1.webp" alt="Acción 1">
+            <p>John Wick</p>
+        </div>
+        <div class="pelicula" data-categoria="accion">
+            <img src="imagenes/jhon_2.jpg" alt="Acción 2">
+            <p>John Wick 2</p>
+        </div>
+        <div class="pelicula" data-categoria="comedia">
+            <img src="imagenes/son_como.jpg" alt="Comedia 1">
+            <p>Son como niños</p>
+        </div>
+        <div class="pelicula" data-categoria="drama">
+            <img src="imagenes/el_padrino.webp" alt="Drama 1">
+            <p>El Padrino</p>
+        </div>
+        <div class="pelicula" data-categoria="comedia">
+            <img src="imagenes/piratas.webp" alt="Comedia 3">
+            <p>Piratas del Caribe En el fin del mundo</p>
+        </div>
+        <div class="pelicula" data-categoria="animacion">
+            <img src="imagenes/rey_leon.webp" alt="Animación 1">
+            <p>El Rey Leon</p>
+        </div>
+        
+        <div class="pelicula" data-categoria="drama">
+            <img src="imagenes/pijama.png" alt="Drama 3">
+            <p>El niño con el pijama de rayas</p>
+        </div>
+        <div class="pelicula" data-categoria="accion">
+            <img src="imagenes/jhon_3.webp" alt="Acción 3">
+            <p>John Wick 3</p>
+        </div>
+        <div class="pelicula" data-categoria="accion">
+            <img src="imagenes/jhon_4.webp" alt="Acción 4">
+            <p>John Wick 4</p>
+        </div>
+        <div class="pelicula" data-categoria="accion">
+            <img src="imagenes/terminator.jpg" alt="Acción 5">
+            <p>Termineitor</p>
+        </div>
+        <div class="pelicula" data-categoria="animacion">
+            <img src="imagenes/minions.jfif" alt="Animación 3">
+            <p>Minios</p>
+        </div>
+        <div class="pelicula" data-categoria="drama">
+            <img src="imagenes/busqueda.webp" alt="Drama 4">
+            <p>En Busqueda de la felicidad</p>
+        </div>
+        <div class="pelicula" data-categoria="drama">
+            <img src="imagenes/intocable.jpg" alt="Drama 5">
+            <p>Intocable</p>
+        </div>
+
+        <div class="pelicula" data-categoria="comedia">
+            <img src="imagenes/son_como2.webp" alt="Comedia 2">
+            <p>Son como niños 2</p>
+        </div>
+
+        <div class="pelicula" data-categoria="comedia">
+            <img src="imagenes/yo y mi otro yo.webp" alt="Comedia 4">
+            <p>Irene y Yo... Y Mi Otro Yo</p>
+        </div>
+        <div class="pelicula" data-categoria="comedia">
+            <img src="imagenes/todo_poderoso.jpg" alt="Comedia 5">
+            <p>Todo Poderoso</p>
+        </div>
+        <div class="pelicula" data-categoria="animacion">
+            <img src="imagenes/mi_villano.jpg" alt="Animación 2">
+            <p>Mi Villano Favorito</p>
+        </div>
+
+        <div class="pelicula" data-categoria="animacion">
+            <img src="imagenes/toy_story.jpg" alt="Animación 4">
+            <p>TOY STORY</p>
+        </div>
+        <div class="pelicula" data-categoria="animacion">
+            <img src="imagenes/toy_3.jfif" alt="Animación 5">
+            <p>TOY STORY 3</p>
+        </div>
+        <!-- Agrega más películas según sea necesario -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
