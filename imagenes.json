@@ -1,0 +1,125 @@
+{
+    "imagenes": [
+      {
+        "nombre": "amanecer",
+        "ruta": "imagenes/amanecer.jfif"
+      },
+      {
+        "nombre": "animacion",
+        "ruta": "imagenes/Animación.jfif"
+      },
+      {
+        "nombre": "anime",
+        "ruta": "imagenes/anime.jfif"
+      },
+      {
+        "nombre": "atardeceres",
+        "ruta": "imagenes/atardeceres.jfif"
+      },
+      {
+        "nombre": "busqueda",
+        "ruta": "imagenes/busqueda.webp"
+      },
+      {
+        "nombre": "comedia",
+        "ruta": "imagenes/comedia.jfif"
+      },
+      {
+        "nombre": "drama",
+        "ruta": "imagenes/drama.jfif"
+      },
+      {
+        "nombre": "el_padrino",
+        "ruta": "imagenes/el_padrino.webp"
+      },
+      {
+        "nombre": "goku",
+        "ruta": "imagenes/goku.jfif"
+      },
+      {
+        "nombre": "intocable",
+        "ruta": "imagenes/intocable.jpg"
+      },
+      {
+        "nombre": "janco",
+        "ruta": "imagenes/janco.jpg"
+      },
+      {
+        "nombre": "jhon",
+        "ruta": "imagenes/jhon.jfif"
+      },
+      {
+        "nombre": "jhon_1",
+        "ruta": "imagenes/jhon_1.webp"
+      },
+      {
+        "nombre": "jhon_2",
+        "ruta": "imagenes/jhon_2.jpg"
+      },
+      {
+        "nombre": "jhon_3",
+        "ruta": "imagenes/jhon_3.webp"
+      },
+      {
+        "nombre": "jhon_4",
+        "ruta": "imagenes/jhon_4.webp"
+      },
+      {
+        "nombre": "mi_villano",
+        "ruta": "imagenes/mi_villano.jpg"
+      },
+      {
+        "nombre": "minions",
+        "ruta": "imagenes/minions.jfif"
+      },
+      {
+        "nombre": "paisaje",
+        "ruta": "imagenes/paisaje.jfif"
+      },
+      {
+        "nombre": "pijama",
+        "ruta": "imagenes/pijama.png"
+      },
+      {
+        "nombre": "piratas",
+        "ruta": "imagenes/piratas.webp"
+      },
+      {
+        "nombre": "rey_leon",
+        "ruta": "imagenes/rey_leon.webp"
+      },
+      {
+        "nombre": "seleccion",
+        "ruta": "imagenes/seleccion.jfif"
+      },
+      {
+        "nombre": "son_como",
+        "ruta": "imagenes/son_como.jpg"
+      },
+      {
+        "nombre": "son_como2",
+        "ruta": "imagenes/son_como2.webp"
+      },
+      {
+        "nombre": "terminator",
+        "ruta": "imagenes/terminator.jpg"
+      },
+      {
+        "nombre": "todo_poderoso",
+        "ruta": "imagenes/todo_poderoso.jpg"
+      },
+      {
+        "nombre": "toy_3",
+        "ruta": "imagenes/toy_3.jfif"
+      },
+      {
+        "nombre": "toy_story",
+        "ruta": "imagenes/toy_story.jpg"
+      },
+      {
+        "nombre": "yo y mi otro yo",
+        "ruta": "imagenes/yo y mi otro yo.webp"
+      }
+    ]
+  }
+  
